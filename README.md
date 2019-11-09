@@ -75,7 +75,7 @@ As a first step you'll need to:
 1. Navigate to the Microsoft identity platform for developers [App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page.
 1. Select **New registration**.
 1. When the **Register an application page** appears, enter your application's registration information:
-   - In the **Name** section, enter a meaningful application name that will be displayed to users of the app, for example `TodoListService-aspnetcore-webapi`.
+   - In the **Name** section, enter a meaningful application name that will be displayed to users of the app, for example `PeopleAPI-aspnetcore-webapi`.
    - Leave **Supported account types** on the default setting of **Accounts in this organizational directory only**.
 1. Select **Register** to create the application.
 1. On the app **Overview** page, find the **Application (client) ID** value and record it for later. You'll need it to configure the Visual Studio configuration file for this project.
@@ -86,10 +86,10 @@ As a first step you'll need to:
    - Enter the following parameters
      - for **Scope name** use `user_impersonation`
      - Keep **Admins and users** for **Who can consent**
-     - in **Admin consent display name** type `Access TodoListService-aspnetcore-webapi as a user`
-     - in **Admin consent description** type `Accesses the TodoListService-aspnetcore-webapi Web API as a user`
-     - in **User consent display name** type `Access TodoListService-aspnetcore-webapi as a user`
-     - in **User consent description** type `Accesses the TodoListService-aspnetcore-webapi Web API as a user`
+     - in **Admin consent display name** type `Access PeopleAPI-aspnetcore-webapi as a user`
+     - in **Admin consent description** type `Accesses the PeopleAPI-aspnetcore-webapi Web API as a user`
+     - in **User consent display name** type `Access PeopleAPI-aspnetcore-webapi as a user`
+     - in **User consent description** type `Accesses the PeopleAPI-aspnetcore-webapi Web API as a user`
      - Keep **State** as **Enabled**
      - Select **Add scope**
 
@@ -98,7 +98,7 @@ As a first step you'll need to:
 1. Navigate to the Microsoft identity platform for developers [App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) page.
 1. Select **New registration**.
 1. When the **Register an application page** appears, enter your application's registration information:
-   - In the **Name** section, enter a meaningful application name that will be displayed to users of the app, for example `TodoListClient-aspnetcore-webapi`.
+   - In the **Name** section, enter a meaningful application name that will be displayed to users of the app, for example `WebClient-aspnetcore-webapi`.
    - Leave **Supported account types** on the default setting of **Accounts in this organizational directory only**.
      > Note that there are more than one redirect URIs. You'll need to add them from the **Authentication** tab later after the app has been created successfully.
 1. Select **Register** to create the application.
@@ -122,7 +122,7 @@ As a first step you'll need to:
 1. Select the **API permissions** section
    - Click the **Add a permission** button and then,
    - Ensure that the **My APIs** tab is selected
-   - In the list of APIs, select the API `TodoListService-aspnetcore-webapi`.
+   - In the list of APIs, select the API `PeopleAPI-aspnetcore-webapi`.
    - In the **Delegated permissions** section, ensure that the right permissions are checked: **Access 'TodoListService-aspnetcore-webapi'**. Use the search box if necessary.
    - Select the **Add permissions** button
 
@@ -139,7 +139,7 @@ Note: if you had used the automation to setup your application mentioned in [Ste
 1. Open the `TodoListService\appsettings.json` file
 1. Find the app key `Domain` and replace the existing value with your Azure AD tenant name.
 1. Find the app key `TenantId` and replace the existing value with your Azure AD tenant ID.
-1. Find the app key `ClientId` and replace the existing value with the application ID (clientId) of the `TodoListService-aspnetcore-webapi` application copied from the Azure portal.
+1. Find the app key `ClientId` and replace the existing value with the application ID (clientId) of the `PeopleAPI-aspnetcore-webapi` application copied from the Azure portal.
 
 #### Configure the client project
 
@@ -148,10 +148,10 @@ Note: if you had used the automation to setup your application mentioned in [Ste
 1. Open the `Client\appsettings.json` file
 1. Find the app key `Domain` and replace the existing value with your Azure AD tenant name.
 1. Find the app key `TenantId` and replace the existing value with your Azure AD tenant ID.
-1. Find the app key `ClientId` and replace the existing value with the application ID (clientId) of the `TodoListClient-aspnetcore-webapi` application copied from the Azure portal.
-1. Find the app key `ClientSecret` and replace the existing value with the key you saved during the creation of the `TodoListClient-aspnetcore-webapi` app, in the Azure portal.
-1. Find the app key `TodoListScope` and replace the existing value with Scope if you changed the name from `api://<client id>/user_impersonation`.
-1. Find the app key `TodoListBaseAddress` and replace the existing value with the base address of the TodoListService-aspnetcore-webapi project (or use the default `https://localhost:44351/`).
+1. Find the app key `ClientId` and replace the existing value with the application ID (clientId) of the `WebClient-aspnetcore-webapi` application copied from the Azure portal.
+1. Find the app key `ClientSecret` and replace the existing value with the key you saved during the creation of the `WebClient-aspnetcore-webapi` app, in the Azure portal.
+1. Find the app key `PeopleScope` and replace the existing value with Scope if you changed the name from `api://<client id>/user_impersonation`.
+1. Find the app key `PeopleBaseAddress` and replace the existing value with the base address of the TodoListService-aspnetcore-webapi project (or use the default `https://localhost:44351/`).
 
 ### Step 4: Run the sample
 
@@ -166,7 +166,7 @@ This behavior is expected as you are not authenticated. The client application w
 
 Explore the sample by signing in into the TodoList client, adding items to the To Do list. If you stop the application without signing out, the next time you run the application, you won't be prompted to sign in again.
 
-NOTE: Remember, the To-Do list is stored in memory in this `TodoListService` app. Each time you run the projects, your To-Do list will get emptied.
+NOTE: Remember, the To-Do list is stored in memory in this `WebAPI` app. Each time you run the projects, your To-Do list will get emptied.
 
 > Did the sample not work for you as expected? Did you encounter issues trying this sample? Then please reach out to us using the [GitHub Issues](../../../issues) page.
 
