@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs
+/obj
+/ClientAzureAD/.vs/ClientAzureAD
+/ClientAzureAD/bin/Debug/netcoreapp2.2
+/ClientAzureAD/obj
+/Microsoft.Identity.Web/bin/Debug
+/Microsoft.Identity.Web/obj
+/WebAPIAzureAD/.vs/WebAPIAzureAD
+/WebAPIAzureAD/bin/Debug/netcoreapp2.2
+/WebAPIAzureAD/obj

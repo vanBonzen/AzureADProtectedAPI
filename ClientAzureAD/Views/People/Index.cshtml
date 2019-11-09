@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ClientAzureAD.Models.Person>
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+@foreach (var p in Model)
+{
+    <span>@p.FirstName @p.LastName</span><br />
+}
