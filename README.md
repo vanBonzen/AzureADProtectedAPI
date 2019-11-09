@@ -151,7 +151,7 @@ Note: if you had used the automation to setup your application mentioned in [Ste
 1. Find the app key `ClientId` and replace the existing value with the application ID (clientId) of the `WebClient-aspnetcore-webapi` application copied from the Azure portal.
 1. Find the app key `ClientSecret` and replace the existing value with the key you saved during the creation of the `WebClient-aspnetcore-webapi` app, in the Azure portal.
 1. Find the app key `PeopleScope` and replace the existing value with Scope if you changed the name from `api://<client id>/user_impersonation`.
-1. Find the app key `PeopleBaseAddress` and replace the existing value with the base address of the TodoListService-aspnetcore-webapi project (or use the default `https://localhost:44351/`).
+1. Find the app key `PeopleBaseAddress` and replace the existing value with the base address of the PeopleAPI-aspnetcore-webapi project (or use the default `https://localhost:44351/`).
 
 ### Step 4: Run the sample
 
@@ -237,7 +237,7 @@ NOTE: Remember, the To-Do list is stored in memory in this `WebAPI` app. Each ti
 1. Copy the files `TodoListService` and `TodoListService.cs` in the **TodoListClient\Services** folder provided in this sample to your project .
 1. Copy the contents of **TodoListClient\views\ToDo** folder to the views folder of your project.
 1. Modify the `Views\Shared\_Layout.cshtml` to add a link to the ***ToDolist* controller. Check the `Views\Shared\_Layout.cshtml` in the sample for reference.
-1. Add a section name **TodoList** in the appsettings.json file and add the keys `TodoListScope`, `TodoListBaseAddress`.
+1. Add a section name **TodoList** in the appsettings.json file and add the keys `PeopleScope`, `PeopleBaseAddress`.
 1. Update the `configureServices` method in `startup.cs` to add the MSAL library and a token cache.
 
     ```CSharp
