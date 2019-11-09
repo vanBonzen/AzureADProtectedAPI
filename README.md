@@ -4,6 +4,9 @@
 
 This sample is essentially a guide for developers who want to secure their Web APIs using the Microsoft identity platform (formerly Azure Active Directory for developers). This sample lays down the all the steps developers need to take to secure their web api with the Microsoft identity platform. Additionally it also explains the steps and processes for a client to obtain the necessary permissions and tokens to make successful calls to this secured web api.  
 
+### Topology
+![Topology](https://i.vanbonzen.cam/s/iAC5E9RENFPwjBb/preview "Logo Title Text 1")
+
 ### Scenario
 
 This sample has a web api and a client web app, both built using the asp.net core platform. The client app signs in users using the [OpenID Connect protocol](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) flow and in this process obtains (and caches) an [access token](https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens) for the web api. The client app has a ToDo list that the web app users can work with. This ToDo list is maintained in an in-memory list on the Web API. The client app calls the webApi for all operations on the ToDo list.
