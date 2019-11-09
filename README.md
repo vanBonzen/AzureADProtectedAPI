@@ -42,9 +42,8 @@ The client web application (WebClient) enables a user to:
 From your shell or command line:
 
 ```Shell
-git clone https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2.git
+git clone https://github.com/vanBonzen/AzureADProtectedAPI.git
 
-cd "4-WebApp-your-API\4-1-Your-API"
 ```
 
 or download and exact the repository .zip file.
