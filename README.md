@@ -1,4 +1,4 @@
-# How to secure a Web API built with ASP.NET Core using the Microsoft identity platform (formerly Azure Active Directory for developers)
+# AzureADProtectedAPI
 
 ## About this sample
 
